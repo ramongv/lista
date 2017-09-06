@@ -14,9 +14,9 @@ $campopartido=mysqli_real_escape_string($connect,$_POST["campopartido"]);
 $nnewpartido=mysqli_real_escape_string($connect,$_POST["nnewpartido"]);
 $valorpartido=$_POST["valorpartido"];
 if ($usuario=="admin") {
-  
+
 }else{
-$sqli="INSERT INTO bitacora(nombrep,nombren,fehca, modifico,usuario) VALUES ('$dni','$nnew',now(),'$nxml','$usuario')";
+$sqli="INSERT INTO bitacora(nombrep,nombren,fehca, modifico,usuario) VALUES ('$valorpartido','$nnewpartido',now(),'$campopartido','$usuario')";
 $res=mysqli_query($connect,$sqli);}
 $sql="UPDATE partido SET $campopartido='$nnewpartido'  WHERE id='$idpar'";
 

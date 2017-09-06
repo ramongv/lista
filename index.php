@@ -47,13 +47,14 @@ if(!isset($_SESSION["user"])){
 
       <a class="navbar-brand" href="registro.php">Asistencia</a>
       <a class="navbar-brand" href="#">Bitacora</a>
+      <a class="navbar-brand" href="odd.php">Orden del dia</a>
     </nav>
 </div>
 
         <div class="container">
 
 
-    <h2 style="text-align: center">Tabla de Registros</h2>
+    <h2 style="text-align: center">Tabla de Registros  <?php echo strtoupper($_SESSION["user"]); ?></h2>
 
     <div class="table-responsive">
 
@@ -219,7 +220,7 @@ if(!isset($_SESSION["user"])){
                     <span class="caret"></span>
                     </button>
                    <ul class="dropdown-menu">
-                    <li><a  onclick="modarchi('.$ii.','."'".$keya."'".');">
+                    <li><a  onclick="modarchi('."'".$valuea."'".','."'".$keya."'".');">
                      Editar
                      </a></li>
                       <li><a href="archivos/'.$valuea.'"target="_blank"  >Ver</a></li>
@@ -407,8 +408,8 @@ if(!isset($_SESSION["user"])){
     </div>
     <div class="modal-body">
       <form enctype="multipart/form-data" id="modarchivo" method="post" action="service/editarch.php">
-              <input type="text" name="nombarchivo" id="nombarchivo" value=""style="visibility:hidden">
-              <input type="text" name="tablaarchi" id="tablaarchi" value=""style="visibility:hidden">
+              <input type="text" name="nombarchivo" id="nombarchivo" value="">
+              <input type="text" name="tablaarchi" id="tablaarchi" value="">
               <div style="text-align: center;"><label  for="archi_file">Subir Archivo</label></div>
 
               <input  type="file"  id="archi_file" name="archi_file"/><br>

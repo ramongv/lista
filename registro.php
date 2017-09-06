@@ -54,6 +54,7 @@ if(!isset($_SESSION["user"])){
 
     <a class="navbar-brand" href="registro.php">Asistencia</a>
     <a class="navbar-brand" href="index.php">Bitacora</a>
+      <a class="navbar-brand" href="odd.php">Orden del dia</a>
   </nav>
 </div>
 

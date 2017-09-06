@@ -21,7 +21,7 @@ if($_SESSION["user"]!="admin"){
   $connect = mysqli_connect("localhost","root","","lista");
   $sql="SELECT * FROM consejeros WHERE id_municipio= $i";
   $result=mysqli_query($connect,$sql);
-  mysql_query("SET NAMES 'utf8'");
+  //mysql_query("SET NAMES 'utf8'");
   $data=mysqli_fetch_array($result);
   $xarr=['consejero1','consejero2','consejero3','consejero4'];
   $axrs=['consejero1sup','consejero2sup','consejero3sup','consejero4sup'];
@@ -93,7 +93,7 @@ if($_SESSION["user"]!="admin"){
 
 
 
-  <h2 style="text-align: center">Modificar</h2>
+  <h2 style="text-align: center">Modificar  </h2>
 
 
 
@@ -549,7 +549,8 @@ if($.trim($('#fecha').val()).length > 0 && $.trim(elArray['h_fin']).length > 0){
 
   });
   function mostrar(valor,valor2){
-    $('#modal').modal("show");
+    //$('#modal').modal("show");
+    $("#myModal").modal("show");
     var r=valor.concat("n");
     var r="#".concat(r);
     var rq=$(r).text();
@@ -558,7 +559,8 @@ if($.trim($('#fecha').val()).length > 0 && $.trim(elArray['h_fin']).length > 0){
     $(".modal-body #nxml").val(valor);
   };
   function mostrardos(pid,val,campo){
-    $('#modalpartido').modal("show");
+    //$('#modalpartido').modal("show");
+      $("#partido").modal("show");
     var r=val.concat("n");
     var r="#".concat(r);
     var rq=$(r).text();
